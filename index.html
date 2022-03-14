@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password Generator</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@900&display=swap" rel="stylesheet">
+        <link href="style/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="header">
+                    <h1>Invoice Creator</h1>
+                    <p>Thanks for choosing GoodCorp, LLC!</p>
+                </div>
+                <div class="content">
+                    <div class="btn-group">
+                        <button id ="wash-el">Wash Car: $10</button>
+                        <button id ="mow-el">Mow Lawn: $20</button>
+                        <button id ="weed-el">Pull Weeds: $30</button>
+                    </div>
+                    <div id="list-el">
+                        <div class="row">
+                            <div class="column">
+                                <h4>Task</h4>
+                                <ul id="service-el"></ul>
+                            </div>
+                            <div class="column">
+                                <h4 >Total</h4>
+                                <ul id="amount-el"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <div class="row">
+                            <div class="column">
+                                <h4>Notes</h4>
+                                <p>We accept cash,credit card, or Paypal</p>
+                            </div>
+                            <div class="column">
+                                <h4>Total Amount</h4>
+                                <p id="sum-el"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="invoice-btn">
+                        <button id="send-btn"><i class="fa fa-envelope"></i>Send Invoice</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
