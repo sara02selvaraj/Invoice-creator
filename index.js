@@ -33,28 +33,20 @@ weedEl.addEventListener('click', function(){
 
 function renderList(arr){
     let listItems =''
-    let price = 0
+    let price =null;
     let sum = 0
-    //let span = document.createElement('span')
-    //let listItems = document.createElement('li')
-    //span.textContent = 'remove'
-    for(let i =0 ; i< arr.length; i++){
-        //listItems.textContent= arr[i].name
-        //listItems.setAttribute('class', arr[i].name)
-        //span.setAttribute('onclick', `removeElement(${arr.indexOf(arr[i])})`)
-        //listItems.appendChild(span)
-        listItems += `<li>${arr[i].name} <span onClick='removeElement(${arr.indexOf(arr[i])})'>remove</span></li>`
+    for(let item of arr){
+        listItems += `<li>${item.name} <span onClick='removeElement(${arr.indexOf(item)})'>remove</span></li>`
         if(price){
-            price+=`<li>$ ${arr[i].price}</li>`
+            price+=`<li>$ ${item.price}</li>`
         }else{
-            price=`<li>$ ${arr[i].price}</li>`
+            price=`<li>$ ${item.price}</li>`
         } 
-        sum += arr[i].price
+        sum += item.price
     }
-    //serviceEl.append(listItems)
     serviceEl.innerHTML =listItems
     amountEl. innerHTML = price
-    sumEl.textContent= `$ ${sum}`
+    sumEl.textContent= `${sum === 0 ? '' : `$${sum}`}`
 }
 
 function removeElement(index){
